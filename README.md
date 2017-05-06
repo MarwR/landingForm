@@ -1,3 +1,3 @@
 # landingForm
 Landing Form.
-HTML, JS, PHP
+HTML, JS, PHP, PHPmyAdmin
