@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	
+		<script type="text/javascript">
+		function Choice() {
+			if (document.getElementById('choice-yes').checked) {
+				document.getElementById('ifyes').style.display = 'block'; }	
+			else document.getElementById('ifyes').style.display = 'none';
+			
+			if (document.getElementById('choice-no').checked) {
+				document.getElementById('ifno').style.display = 'block'; }	
+			else document.getElementById('ifno').style.display = 'none';
+		}	
+		
+	
+	</script>
+	
+</head>
+<body style="width:80%;">	
+
+<div id="main" style="width : 50%; padding: 0px 200px;">
+<form  method="POST" action="landingForm.php"  name="landingform" id= "myForm">
+					
+    Enter your name: </br>
+	<input type="text" name="name" id="name" size="30" value=""/>   </br></br>   
+    Enter your Email so that we can contact you(required) </br>
+	<input type="text" name="email" id="email" required="required" size="30" value=""/> </br> </br>
+	
+	Would you pay 0,50EUR per week in order to learn extremely interesting facts about mathematics?(required) </br>	
+	
+	
+		YES	<input type="radio" name="choice" id="choice-yes" value="YES" onclick="Choice();">
+			
+			<div class="reveal-if-active" id="ifyes" style="display : none;" >
+				Starting from July 2016 would you like to pay:	<br>
+				<input type="radio" name="selected" id="selected" value="1E/week(total 25E/year)"> 1E/week(total 25E/year) <br>
+				<input type="radio" name="selected" id="selected" value="26E/year(prepay)"> 26E/year(prepay) <br>				
+			</div>
+		<br>
+		
+		NO	<input type="radio" name="choice" id="choice-no" value="NO" onclick="Choice();">
+		
+			<div class="reveal-if-active" id="ifno" style="display : none;" >
+				I demonstrate how you can even make money out of it apart from the knowledge you acquire?<br>
+				<input type="radio" name="selected" id="selected" value="Ok, I will try"> Ok, I will try <br>
+				<input type="radio" name="selected" id="selected" value="I am not interested.  Over and out."> I am not interested.  Over and out. <br>
+			</div>
+			
+		<br>
+	
+	<button id="submit" class="pagesub" type="submit" onclick="submit()">Send</button>
+	<button id="reset" type="reset">Reset</button>
+	</form>
+	
+	
+	
+	
+	</div>
+	
+</body>
+</html>
+
+
+
